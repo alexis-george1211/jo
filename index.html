@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello, Juls!</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!-- Landing Page -->
+<div class="landing">
+    <img src="flower.jpg" alt="Valentine Photo" class="valentine-photo">
+
+    <h1>Will you be my Valentine?</h1>
+    <div class="buttons">
+        <button class="btn yes-btn" id="yesBtn">Yes</button>
+        <button class="btn no-btn" id="noBtn">No!</button>
+    </div>
+</div>
+
+<!-- Facebook-style Letters Page -->
+<div class="letters" id="lettersPage">
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <div class="cover-photo"></div>
+        <div class="profile-info">
+            <img src="juls.jpeg" alt="Snoopy" class="profile-pic">
+            <h2>Jul's Valentine Feed</h2>
+        </div>
+    </div>
+
+    <!-- Posts Section -->
+    <div class="posts">
+
+        <div class="post">
+            <div class="post-header">
+                <img src="geo.jpg" class="post-pic" alt="Snoopy">
+                <div>
+                    <strong>Geo</strong>
+                    <span>February 14, 2026</span>
+                </div>
+            </div>
+            <p>Hello, my love! I'm to here remind you that 
+                as deeply as music, as moving as art, my love for you flows even beyond! It's 
+                an honour to have you as my valentine this year and every year to come. :)
+                </p>
+
+            <p>
+                PS: I love you :)
+            </p>
+            <img src="snooppp.jpg" class="post-image" alt="Snoopy">
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <img src="geo.jpg" class="post-pic" alt="Snoopy">
+                <div>
+                    <strong>Me</strong>
+                    <span>Today</span>
+                </div>
+            </div>
+            <p>
+                    There'll be weathers we cannot storm through, uncertain tides that may drown us, and there'll be mountains that 
+                won't always lead us to see where the heavens touch the sea. But I swear to shelter us in the storm,
+                anchor us through the tides, and navigate us through the woods. With you, I am always certain of our paths. 
+                Only the two of us can understand the sureness of our love.
+            </p>
+            <div class="song-info">
+                <h3>And when my words seem to slip through, simply let this song remind you every single time :> </h3>
+                <input type="range" id="seekBar" value="0" min="0" max="100">
+              </div>
+              <button class="replay-btn" id="replayButton">⟳</button>
+              <button class="play-btn" id="playButton">▶</button>
+              <audio id="audioPlayer" src="Dear by Ben&Ben - Dear (Lyrics).mp3"></audio>
+            <img src="music.jpg" class="post-image" alt="Snoopy">
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <img src="geo.jpg" class="post-pic" alt="Snoopy">
+                <div>
+                    <strong>Me</strong>
+                    <span>Today</span>
+                </div>
+            </div>
+            <p>I may be away for today but even in great distances I think of you in every intervals of time. 
+                You may be far but I still see you in every thing that I love and in every single little niche thing that you love as well. 
+                Every little details of life, you perfectly fit its corners and I am blessed to find you in mine. 
+            </p>
+            <img src="snoopy.jpg" class="post-image" alt="Snoopy">
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <img src="geo.jpg" class="post-pic" alt="Snoopy">
+                <div>
+                    <strong>Me</strong>
+                    <span>Today</span>
+                </div>
+            </div>
+            <p>Happy Valentine’s Day, Juls. I really had fun making this for you and as always, 
+                my love, love is all these and more!</p>
+            <img src="snoo.jpeg" class="post-image" alt="Snoopy">
+        </div>
+
+    </div>
+</div>
+
+
+ <!-- MUSIC PLAYER SCRIPT -->
+ <script>
+    const playButton = document.getElementById('playButton');
+    const replayButton = document.getElementById('replayButton');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const seekBar = document.getElementById('seekBar');
+    let isPlaying = false;
+
+    playButton.addEventListener('click', () => {
+      if (!isPlaying) {
+        audioPlayer.play();
+        playButton.textContent = '⏸';
+      } else {
+        audioPlayer.pause();
+        playButton.textContent = '▶';
+      }
+      isPlaying = !isPlaying;
+    });
+
+    replayButton.addEventListener('click', () => {
+      audioPlayer.currentTime = 0;
+      audioPlayer.play();
+      playButton.textContent = '⏸';
+      isPlaying = true;
+    });
+
+    audioPlayer.addEventListener('timeupdate', () => {
+      const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+      seekBar.value = progress || 0;
+    });
+
+    seekBar.addEventListener('input', () => {
+      const seekTo = (seekBar.value / 100) * audioPlayer.duration;
+      audioPlayer.currentTime = seekTo;
+    });
+
+
+    </script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    background-color: #fafbbf;
+    color: #000;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Landing Page */
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: url('https://upload.wikimedia.org/wikipedia/en/3/32/Snoopy_dog.png') no-repeat center bottom;
+    background-size: 200px auto;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 20px 60px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.yes-btn {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffeb3b;
+}
+
+.no-btn {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ff5252;
+}
+
+/* Letters Page */
+.letters {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f0f2f5;
+}
+
+/* Profile Header */
+.profile-header {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.cover-photo {
+    width: 100%;
+    height: 150px;
+    background-color: #f1ecbe;
+   
+}
+
+.profile-info {
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+}
+
+.profile-info h2 {
+    margin: 10px 0 0 0;
+}
+
+/* Posts Section */
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 0 50px 0;
+}
+
+.post {
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.208);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.post-pic {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.post-header strong {
+    display: block;
+}
+
+.post-header span {
+    font-size: 0.8em;
+    color: gray;
+}
+
+.post-image {
+    width: 100px;
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+.landing {
+    text-align: center;
+}
+
+.valentine-photo {
+    width: 140px;          /* adjust size */
+    height: 140px;
+    object-fit: cover;     /* prevents stretching */
+    border-radius: 50%;    /* makes it round */
+    margin-bottom: 1px;
+    border: 4px solid #000; /* optional: Snoopy-style outline */
+}
+
+
+/* Music Player Container */
+.song-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    gap: 15px;
+    padding: 10px;
+    background-color: #fff7c0;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Seek bar */
+#seekBar {
+    flex: 1;
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+#seekBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #f32121;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+#seekBar::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #2196f3;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 194, 10, 0.5);
+}
+
+/* Play & Replay Buttons */
+.play-btn, .replay-btn {
+    background-color: #f3dca2;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.play-btn:hover, .replay-btn:hover {
+    background-color: #ffab35;
+    transform: scale(1.1);
+}
+#seekBar {
+    flex: 1; /* grow to fill available space */
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+  .posts p {
+    text-align: justify;
+  }
